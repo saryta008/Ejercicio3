@@ -7,8 +7,7 @@ import android.annotation.SuppressLint;
 import android.media.Image;
 import android.os.Bundle;
 
-import android.widget.ImageView;
-import android.widget.RadioGroup;
+import android.widget.*;
 
 public class MainActivity extends AppCompatActivity {
     RadioGroup miRadioGroup;
@@ -16,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView fotoLluvia;
     ImageView fotoSoleado;
     ImageView fotoNieve;
+    CheckBox limpiar;
 
 
 
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fotoLluvia=findViewById(R.id.lluvia);
         fotoSoleado=findViewById(R.id.soleado);
         fotoNieve=findViewById(R.id.nieve);
+        limpiar=findViewById(R.id.limpiar);
 
         miRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -53,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 } else if (chekedld == R.id.opcion4) {
                     fotoNieve.setVisibility(View.VISIBLE);
                     fotoNieve.setImageResource(R.drawable.nieve);
+                }
+            }
+        });
+        limpiar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
+                if(b){
+                    miRadioGroup.clearCheck();
                 }
             }
         });

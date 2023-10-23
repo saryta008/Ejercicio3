@@ -85,6 +85,14 @@
             tools:layout_editor_absoluteY="391dp"
             android:visibility="gone"/>
 
+        <CheckBox
+            android:id="@+id/limpiar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="96dp"
+            android:text="Limpiar" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
