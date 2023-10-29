@@ -60,8 +60,11 @@ public class MainActivity extends AppCompatActivity {
         limpiar.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-                if(b){
+                if(limpiar.isChecked()== true){
                     miRadioGroup.clearCheck();
+                    limpiar.toggle();
+                }else {
+
                 }
             }
         });
